@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Contador</title>
+
+    <style>
+        * {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    border: 1px solid red;
+    min-height: 100vh;
+    background: black;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+section  {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 150px;
+}
+    </style>
+</head>
+
+<body>
+    <section>
+    
+        <h1>Contador</h1>
+        <p>0</p>
+        <div id="counter"></div>
+        <button name ="subtrair" onclick="diminuir()"> - </button>
+        
+        <button name ="adicionar"onclick="aumentar()"> + </button>
+        
+    </section>
+    <script>
+        let numero = 0
+
+        function aumentar() {
+        numero = numero + 1
+        mostrarNaTela();
+    }
+
+        function diminuir() {
+        numero = numero - 1
+        mostrarNaTela();
+    }
+
+
+
+        // jogar o estado da aplicacao na tela
+        function mostrarNaTela() {
+        const p = document.querySelector("p")
+        p.innerText = numero
+        console.log(p)
+    }
+
+
+
+        // iniciar
+        mostrarNaTela()
+    </script>
+</body>
+
+</html>
